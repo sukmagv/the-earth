@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>THE EARTH</title>
+        <link rel="stylesheet" type="text/css" href="styleEarth.css">
+        <script type="text/javascript" src="jquery.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+            <a href="earth.html">Home</a>
+            <a href="galleries.html">Galleries</a>
+            <a href="#about">About</a>
+        </div>
+            <div class="content1">
+                <hgroup>
+                    <h1>THE EARTH</h1>
+                </hgroup>
+            </div>
+            <img class="gif" src="img/giphy.gif"
+                width="650px" frameBorder="0" allowFullScreen>
+            </img>
+        </header>
+
+        
+
+        <div class="content2">
+            <p class="title">What Is Earth?</p>
+            <p class="desc">Earth is our home planet. Scientists believe Earth and its moon formed around the same time as the rest of the solar system.
+                They think that was about 4.5 billion years ago. Earth is the fifth-largest planet in the solar system. 
+                Its diameter is about 8,000 miles. And Earth is the third-closest planet to the sun. 
+                Its average distance from the sun is about 93 million miles. <br><br>
+                On Earth, everything is just right for life to exist. 
+                It's warm, but not too warm. And it has water, but not too much water.
+                Earth is the only planet known to have large amounts of liquid water. 
+                Liquid water is essential for life. Earth is the only planet where life is known to exist.</p>
+            <img class="earth1" src="img/rt4.gif" width="37%"><br>
+            <a class="earth-lm" href="https://www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/what-is-earth-58.html" target="_blank">
+                Learn More</a>
+                <script>
+                    $(document).ready(function() {
+                        $(".earth-lm").hover(function(){
+                            $(this).css("background-color", "white");
+                        },function(){
+                            $(this).css("background-color", "rgba(156, 156, 156, 0.507)");
+                        });
+                      })
+                </script>
+        </div>
+        <div class="content3">
+            What Is Earth Consists Of?
+        </div>
+
+        <div class="tab">
+            <button class="tablink" onclick="openPage('Land', this, 'grey')" id="defaultOpen">Land</button>
+            <button class="tablink" onclick="openPage('Air', this, 'grey')">Air</button>
+            <button class="tablink" onclick="openPage('Water', this, 'grey')">Water</button>
+        </div>
+        
+
+        <div id="Land" class="tabcontent">
+            <div class="land">
+                <img class="slide1" src="img/l1.jpg">
+                <img class="slide2" src="img/l2.jpg">
+                <img class="slide3" src="img/l4.jpg">
+            </div>
+            <p class="land-des">Area of land: 148 326 000 km2 (57 268 900 square miles), this are 29% of the total 
+                surface of Planet Earth. 
+                Earth's land consists of many islands around the globe, but mainly of four continental landmasses, 
+                which are from largest to smallest: Afroeurasia,America, Antarctica and Australia.
+                These landmasses are further broken down and grouped into the continents. <br><br>
+                The terrain varies greatly and consists of mountains, deserts, plains, plateaus, and other landforms. 
+                The elevation of the land surface varies from the low point of −418 m (−1,371 ft) at the Dead Sea, 
+                to a maximum altitude of 8,848 m (29,029 ft) at the top of Mount Everest. 
+                The mean height of land above sea level is about 797 m (2,615 ft).
+            </p>
+        </div>
+
+        <div id="Air" class="tabcontent">
+            <div class="air">
+                <img class="slide1" src="img/a1.jpg">
+                <img class="slide2" src="img/a2.jpg">
+                <img class="slide3" src="img/a4.jpg">
+            </div>
+            <p class="air-des">Earth’s atmosphere is composed of about 78 percent nitrogen, 21 percent oxygen, 0.9 percent argon, 
+                and 0.1 percent other gases. Trace amounts of carbon dioxide, methane, water vapor, and neon are 
+                some of the other gases that make up the remaining 0.1 percent. <br><br>
+                Air also contains a variable amount of water vapor, on average around 1% at sea level, 
+                and 0.4% over the entire atmosphere. Air composition, temperature, and atmospheric pressure 
+                vary with altitude. Within the atmosphere, air suitable for use in photosynthesis by terrestrial 
+                plants and breathing of terrestrial animals is found only in Earth's troposphere.</p>
+        </div>
+
+        <div id="Water" class="tabcontent">
+            <div class="water">
+                <img class="slide1" src="img/w1.jpg">
+                <img class="slide2" src="img/w2.jpg">
+                <img class="slide3" src="img/w4.jpg">
+            </div>
+            <p class="water-des">Area of water: 361 740 000 km2 (139 668 500 square miles), this are 71% of 
+                the total surface of the Earth.
+                97 percent is salt water and only 3 percent is fresh water. 
+                Most of the surface is made of water, in liquid form or in smaller amounts as ice. 70.8% 
+                (361.13 million km2 (139.43 million sq mi)) of the Earth's surface consists of the interconnected ocean,
+                making it Earth's global ocean or world ocean. <br><br> This makes Earth, along with its vibrant 
+                hydrosphere a water world or ocean world, particularly in Earth's early history
+                 when the ocean is thought to have possibly covered Earth completely.[104] The world ocean is commonly 
+                 divided into the Pacific Ocean, Atlantic Ocean, Indian Ocean, Southern Ocean and Arctic Ocean,
+                  from largest to smallest. </p>
+        </div>
+
+        <script>
+            function openPage(pageName, elmnt, color) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+
+                document.getElementById(pageName).style.display = "block";
+
+                elmnt.style.backgroundColor = color;
+            }
+            document.getElementById("defaultOpen").click();
+        </script>
+
+        <footer id="about">
+            <h3><hr width="80%"> About</h3>
+            <div class="about">
+            <b id="cp">Contact Person</b><br>
+            <div class="text2">
+                <img class="icon" src="img/ig.png">
+                <a href="https://instagram.com/sukmaglsv__?igshid=YmMyMTA2M2Y=" target="_blank">
+                    @sukmaglsv__
+                </a><br>
+                <img class="icon" src="img/em.jpg">
+                <a href="mailto:sukmagladysv@gmail.com" target="_blank">
+                    sukmagladysv@gmail.com
+                </a><br>
+                <img class="icon" src="img/wa.jpg">
+                <a href="https://api.whatsapp.com/send?phone=085895792106" target="_blank">
+                    0858-9579-2106
+                </a><br>
+            </div>
+
+            <div class="text3">
+                <b class="biodata">About Me :</b> <br>
+                <img class="profil" src="img/profil.png">
+                <ul>
+                    Sukma Gladys Vellanie <br>
+                    Mahasiswi Polinema <br>
+                    Teknologi Informasi
+                </ul>
+            </div>
+            </div>
+            
+        </footer>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        <script>
+            let anchorSelector = 'a[href^="#about"]';
+                let anchorList =
+                    document.querySelectorAll(anchorSelector);
+                 
+                anchorList.forEach(link => {
+                    link.onclick = function (e) {
+                        e.preventDefault();
+                        let destination =
+                            document.querySelector(this.hash);
+                        destination.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+
+
+            $(document).ready(function(){
+                var isVisible = false;
+                $("#about").hover(function(){
+                    if (!isVisible) {
+                        $(".about").slideDown();
+                        isVisible = true;
+                    } else {
+                        $(".about").slideUp();
+                        isVisible = false;
+                    }
+                })
+            });
+
+
+            $(document).ready(function() {
+                $("#myBtn").hover(function(){
+                    $(this).css("background-color", "white");
+                },function(){
+                    $(this).css("background-color", "rgba(156, 156, 156, 0.507)");
+                });
+            })
+
+            let mybutton = document.getElementById("myBtn");
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </body>
+</html>

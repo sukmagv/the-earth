@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>THE EARTH</title>
+        <link rel="stylesheet" type="text/css" href="gstyle.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="earth.html">Home</a>
+            <a href="galleries.html">Galleries</a>
+			<a href="#about">About</a>
+        </div>
+        <div class="gallery">
+	    <div class="gallery__column">
+		<a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/a1.jpg" class="gallery__image">
+			</figure>
+		</a>
+        <a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/l2.jpg" class="gallery__image">
+			</figure>
+		</a>
+        <a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/w1.jpg" class="gallery__image">
+			</figure>
+		</a>
+		
+	</div>
+	
+	<div class="gallery__column">
+		<a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/l1.jpg" class="gallery__image">
+			</figure>
+		</a>
+        <a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/l4.jpg" class="gallery__image">
+			</figure>
+		</a>
+        <a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/l3.jpg" class="gallery__image">
+			</figure>
+		</a>
+	</div>
+	
+	<div class="gallery__column">
+		<a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/w5.jpg" class="gallery__image">
+			</figure>
+		</a>
+        <a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/w2.jpg" class="gallery__image">
+			</figure>
+		</a>
+        <a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/w3.jpg" class="gallery__image">
+			</figure>
+		</a>
+	</div>
+	
+	<div class="gallery__column">
+		<a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/a5.png" class="gallery__image">
+			</figure>
+		</a>
+        <a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/l5.jpg" class="gallery__image">
+			</figure>
+		</a>
+        <a href="#" target="_blank" class="gallery__link">
+			<figure class="gallery__thumb">
+				<img src="img/w4.jpg" class="gallery__image">
+			</figure>
+		</a>
+	</div>
+</div>
+<footer id="about">
+	<h3><hr width="80%"> About</h3>
+            <div class="text2">
+                <b>Contact Person</b><br>
+                <img class="icon" src="img/ig.png">
+                <a href="https://instagram.com/sukmaglsv__?igshid=YmMyMTA2M2Y=" target="_blank">
+                    @sukmaglsv__
+                </a><br>
+                <img class="icon" src="img/em.jpg">
+                <a href="mailto:sukmagladysv@gmail.com" target="_blank">
+                    sukmagladysv@gmail.com
+                </a><br>
+                <img class="icon" src="img/wa.jpg">
+                <a href="https://api.whatsapp.com/send?phone=085895792106" target="_blank">
+                    0858-9579-2106
+                </a><br>
+            </div>
+
+            <div class="text3">
+                <b class="biodata">About Me :</b> <br>
+                <img class="profil" src="img/profil.png">
+                <ul>
+                    Sukma Gladys Vellanie <br>
+                    Mahasiswi Polinema <br>
+                    Teknologi Informasi
+                </ul>
+            </div>
+	<script>
+		let anchorSelector = 'a[href^="#about"]';
+		let anchorList =
+			document.querySelectorAll(anchorSelector);
+		 
+		anchorList.forEach(link => {
+			link.onclick = function (e) {
+				e.preventDefault();
+				let destination =
+					document.querySelector(this.hash);
+				destination.scrollIntoView({
+					behavior: 'smooth'
+				});
+			}
+		});
+	</script>
+</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+<script>
+
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		} else {
+			mybutton.style.display = "none";
+		}
+	}
+
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+</script>
+    </body>
+</html>
